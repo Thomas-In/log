@@ -1,0 +1,100 @@
+2024-11-03T21:22:43Z DBG github.com/kyverno/kyverno/pkg/utils/controller/run.go:71 > starting worker id=0 logger=config-controller/worker v=1
+2024-11-03T21:22:43Z TRC k8s.io/client-go@v0.31.1/tools/cache/reflector.go:368 > Caches populated for *v1.Secret from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243 logger=klog v=2
+2024-11-03T21:22:43Z INF github.com/kyverno/kyverno/cmd/internal/client.go:43 > create kube client... burst=200 kubeconfig= logger=setup/kube-client qps=100 v=0
+2024-11-03T21:22:43Z INF github.com/kyverno/kyverno/cmd/internal/client.go:51 > create kyverno client... burst=200 kubeconfig= logger=setup/kyverno-client qps=100 v=0
+2024-11-03T21:22:43Z INF github.com/kyverno/kyverno/cmd/internal/client.go:59 > create dynamic client... burst=200 kubeconfig= logger=setup/dynamic-client qps=100 v=0
+2024-11-03T21:22:43Z INF github.com/kyverno/kyverno/cmd/internal/client.go:75 > create apiserver client... burst=200 kubeconfig= logger=setup/apiserver-client qps=100 v=0
+2024-11-03T21:22:43Z INF github.com/kyverno/kyverno/cmd/internal/client.go:83 > create the kyverno dynamic client... burst=200 kubeconfig= logger=setup/d-client qps=100 v=0
+2024-11-03T21:22:43Z INF github.com/kyverno/kyverno/cmd/internal/client.go:91 > create the events client... burst=200 kubeconfig= logger=setup/events-client qps=100 v=0
+2024-11-03T21:22:43Z INF github.com/kyverno/kyverno/cmd/internal/client.go:43 > create kube client... burst=200 kubeconfig= logger=setup/events-client/kube-client qps=100 v=0
+2024-11-03T21:22:43Z INF github.com/kyverno/kyverno/cmd/internal/client.go:67 > create metadata client... burst=200 kubeconfig= logger=setup/metadata-client qps=100 v=0
+2024-11-03T21:22:43Z INF github.com/kyverno/kyverno/cmd/internal/reporting.go:13 > setting up reporting... enableReporting=validate,mutate,mutateExisting,imageVerify,generate generate=true imageVerify=true logger=setup/setup-reporting mutate=true mutateExisiting=true v=0 validate=true
+2024-11-03T21:22:43Z TRC github.com/kyverno/kyverno/cmd/background-controller/main.go:148 > setting the background scan interval logger=setup v=2 value=30s
+2024-11-03T21:22:43Z INF github.com/kyverno/kyverno/cmd/internal/engine.go:64 > setup exception selector... enablePolicyException=false exceptionNamespace= logger=setup/exception-selector v=0
+2024-11-03T21:22:43Z INF github.com/kyverno/kyverno/cmd/internal/engine.go:93 > setup config map resolver... enableConfigMapCaching=true logger=setup/configmap-resolver v=0
+2024-11-03T21:22:43Z TRC k8s.io/client-go@v0.31.1/tools/cache/reflector.go:368 > Caches populated for *v1.ConfigMap from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243 logger=klog v=2
+2024-11-03T21:22:43Z INF github.com/kyverno/kyverno/cmd/internal/engine.go:46 > setup engine... logger=setup/engine v=0
+2024-11-03T21:22:43Z TRC k8s.io/client-go@v0.31.1/tools/cache/reflector.go:368 > Caches populated for *v2alpha1.GlobalContextEntry from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243 logger=klog v=2
+2024-11-03T21:22:43Z TRC k8s.io/client-go@v0.31.1/tools/cache/reflector.go:368 > Caches populated for *v1.ClusterPolicy from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243 logger=klog v=2
+2024-11-03T21:22:43Z TRC k8s.io/client-go@v0.31.1/tools/cache/reflector.go:368 > Caches populated for *v1.Policy from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243 logger=klog v=2
+2024-11-03T21:22:43Z INF k8s.io/client-go@v0.31.1/tools/leaderelection/leaderelection.go:254 > attempting to acquire leader lease kyverno/kyverno-background-controller... logger=klog v=0
+2024-11-03T21:22:43Z INF github.com/kyverno/kyverno/cmd/internal/controller.go:32 > starting controller logger=setup name=global-context v=0 workers=1
+2024-11-03T21:22:43Z DBG github.com/kyverno/kyverno/pkg/utils/controller/run.go:58 > starting ... logger=global-context v=1
+2024-11-03T21:22:43Z INF github.com/kyverno/kyverno/cmd/internal/controller.go:32 > starting controller logger=setup name=kyverno-events v=0 workers=3
+2024-11-03T21:22:43Z DBG github.com/kyverno/kyverno/pkg/utils/controller/run.go:71 > starting worker id=0 logger=global-context/worker v=1
+2024-11-03T21:22:43Z INF github.com/kyverno/kyverno/pkg/event/controller.go:101 > start logger=EventGenerator v=0
+2024-11-03T21:22:43Z INF k8s.io/client-go@v0.31.1/tools/leaderelection/leaderelection.go:268 > successfully acquired lease kyverno/kyverno-background-controller logger=klog v=0
+2024-11-03T21:22:43Z INF github.com/kyverno/kyverno/pkg/leaderelection/leaderelection.go:97 > still leading id=kyverno-background-controller-668876559b-k2v77 logger=setup/leader-election v=0
+2024-11-03T21:22:43Z INF github.com/kyverno/kyverno/pkg/leaderelection/leaderelection.go:83 > started leading id=kyverno-background-controller-668876559b-k2v77 logger=setup/leader-election v=0
+2024-11-03T21:22:43Z TRC k8s.io/client-go@v0.31.1/tools/cache/reflector.go:368 > Caches populated for *v1.Policy from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243 logger=klog v=2
+2024-11-03T21:22:43Z TRC k8s.io/client-go@v0.31.1/tools/cache/reflector.go:368 > Caches populated for *v1.ClusterPolicy from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243 logger=klog v=2
+2024-11-03T21:22:43Z TRC k8s.io/client-go@v0.31.1/tools/cache/reflector.go:368 > Caches populated for *v1.Namespace from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243 logger=klog v=2
+2024-11-03T21:22:43Z TRC k8s.io/client-go@v0.31.1/tools/cache/reflector.go:368 > Caches populated for *v2.UpdateRequest from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243 logger=klog v=2
+2024-11-03T21:22:43Z INF github.com/kyverno/kyverno/cmd/internal/controller.go:32 > starting controller logger=setup/leader/controllers name=policy-controller v=0 workers=2
+2024-11-03T21:22:43Z INF github.com/kyverno/kyverno/cmd/internal/controller.go:32 > starting controller logger=setup/leader/controllers name=background-controller v=0 workers=10
+2024-11-03T21:22:43Z INF github.com/kyverno/kyverno/pkg/policy/policy_controller.go:254 > starting logger=PolicyController v=0
+2024-11-03T21:22:43Z INF k8s.io/client-go@v0.31.1/tools/cache/shared_informer.go:313 > Waiting for caches to sync for PolicyController logger=klog v=0
+2024-11-03T21:22:43Z INF github.com/kyverno/kyverno/pkg/background/update_request_controller.go:114 > starting logger=background v=0
+2024-11-03T21:22:43Z INF k8s.io/client-go@v0.31.1/tools/cache/shared_informer.go:320 > Caches are synced for PolicyController logger=klog v=0
+2024-11-03T21:22:43Z INF k8s.io/client-go@v0.31.1/tools/cache/shared_informer.go:313 > Waiting for caches to sync for background logger=klog v=0
+2024-11-03T21:22:43Z INF github.com/kyverno/kyverno/pkg/policy/policy_controller.go:181 > policy created kind=ClusterPolicy logger=PolicyController name=block-traffic-on-new-namespace namespace= uid=070cf9e2-76f5-4362-afa4-7d6b2cd34d94 v=0
+2024-11-03T21:22:43Z INF k8s.io/client-go@v0.31.1/tools/cache/shared_informer.go:320 > Caches are synced for background logger=klog v=0
+2024-11-03T21:22:43Z INF github.com/kyverno/kyverno/pkg/background/generate/controller.go:104 > start processing UR logger=background name=ur-4t9c7 policy=block-traffic-on-new-namespace resourceVersion=5330028 ur=ur-4t9c7 v=0
+2024-11-03T21:22:43Z INF github.com/kyverno/kyverno/pkg/background/generate/controller.go:104 > start processing UR logger=background name=ur-46zqn policy=block-traffic-on-new-namespace resourceVersion=5330018 ur=ur-46zqn v=0
+2024-11-03T21:22:43Z INF github.com/kyverno/kyverno/pkg/background/generate/controller.go:104 > start processing UR logger=background name=ur-5jvmn policy=block-traffic-on-new-namespace resourceVersion=5330009 ur=ur-5jvmn v=0
+2024-11-03T21:22:43Z INF github.com/kyverno/kyverno/pkg/background/generate/controller.go:104 > start processing UR logger=background name=ur-2tkt5 policy=block-traffic-on-new-namespace resourceVersion=5330014 ur=ur-2tkt5 v=0
+2024-11-03T21:22:43Z INF github.com/kyverno/kyverno/pkg/background/generate/controller.go:104 > start processing UR logger=background name=ur-b2p2p policy=block-traffic-on-new-namespace resourceVersion=5330022 ur=ur-b2p2p v=0
+2024-11-03T21:22:43Z INF github.com/kyverno/kyverno/pkg/background/generate/controller.go:104 > start processing UR logger=background name=ur-98r8v policy=block-traffic-on-new-namespace resourceVersion=5330006 ur=ur-98r8v v=0
+2024-11-03T21:22:43Z INF github.com/kyverno/kyverno/pkg/background/generate/controller.go:104 > start processing UR logger=background name=ur-cmlt5 policy=block-traffic-on-new-namespace resourceVersion=5329994 ur=ur-cmlt5 v=0
+2024-11-03T21:22:43Z INF github.com/kyverno/kyverno/pkg/background/generate/controller.go:104 > start processing UR logger=background name=ur-dt4cg policy=block-traffic-on-new-namespace resourceVersion=5330024 ur=ur-dt4cg v=0
+2024-11-03T21:22:43Z INF github.com/kyverno/kyverno/pkg/background/generate/controller.go:104 > start processing UR logger=background name=ur-gsgr8 policy=block-traffic-on-new-namespace resourceVersion=5330005 ur=ur-gsgr8 v=0
+2024-11-03T21:22:43Z INF github.com/kyverno/kyverno/pkg/background/generate/controller.go:104 > start processing UR logger=background name=ur-gjdfl policy=block-traffic-on-new-namespace resourceVersion=5329999 ur=ur-gjdfl v=0
+2024-11-03T21:22:43Z INF github.com/kyverno/kyverno/pkg/policy/mutate.go:15 > update URs on policy event logger=PolicyController/handleMutate/block-traffic-on-new-namespace v=0
+2024-11-03T21:22:43Z INF github.com/kyverno/kyverno/pkg/policy/generate.go:25 > update URs on policy event logger=PolicyController/handleGenerate/block-traffic-on-new-namespace v=0
+2024-11-03T21:22:43Z ERR runtime/panic.go:262 > Observed a panic logger=klog panic="runtime error: invalid memory address or nil pointer dereference" panicGoValue="\"invalid memory address or nil pointer dereference\"" stacktrace="goroutine 297 [running]:\nk8s.io/apimachinery/pkg/util/runtime.logPanic({0x46c7fa0, 0x6a19d40}, {0x3985d00, 0x69320d0})\n\tk8s.io/apimachinery@v0.31.1/pkg/util/runtime/runtime.go:107 +0xbc\nk8s.io/apimachinery/pkg/util/runtime.handleCrash({0x46c7fa0, 0x6a19d40}, {0x3985d00, 0x69320d0}, {0x6a19d40, 0x0, 0x10000c0020819b0?})\n\tk8s.io/apimachinery@v0.31.1/pkg/util/runtime/runtime.go:82 +0x5e\nk8s.io/apimachinery/pkg/util/runtime.HandleCrash({0x0, 0x0, 0xc0020819b0?})\n\tk8s.io/apimachinery@v0.31.1/pkg/util/runtime/runtime.go:59 +0x108\npanic({0x3985d00?, 0x69320d0?})\n\truntime/panic.go:785 +0x132\nk8s.io/apimachinery/pkg/apis/meta/v1/unstructured.(*Unstructured).GetResourceVersion(...)\n\tk8s.io/apimachinery@v0.31.1/pkg/apis/meta/v1/unstructured/unstructured.go:287\ngithub.com/kyverno/kyverno/pkg/background/generate.manageData({{0x46d6e08?, 0xc0026297a0?}, 0x1b?}, {{0xc00271aba0, 0x14}, {0xc0024a1450, 0xd}, {0xc00271abe8, 0x14}, {0xc00271abd0, ...}, ...}, ...)\n\tgithub.com/kyverno/kyverno/pkg/background/generate/data.go:39 +0x2e4\ngithub.com/kyverno/kyverno/pkg/background/generate.(*generator).generate(0xc002894608)\n\tgithub.com/kyverno/kyverno/pkg/background/generate/generator.go:124 +0x8a8\ngithub.com/kyverno/kyverno/pkg/background/generate.(*GenerateController).ApplyGeneratePolicy(0xc000a00e10, {{0x46d6e08?, 0xc00148faa0?}, 0xc001ffe960?}, 0xc00262b2c0, {0xc002604890, 0x1, 0xc00274fb00?})\n\tgithub.com/kyverno/kyverno/pkg/background/generate/controller.go:362 +0xf67\ngithub.com/kyverno/kyverno/pkg/background/generate.(*GenerateController).applyGenerate(_, {_}, {{{0xc001baf160, 0xd}, {0xc001baf150, 0xd}}, {{0xc001baf1c8, 0x8}, {0xc001baf138, 0x3}, ...}, ...}, ...)\n\tgithub.com/kyverno/kyverno/pkg/background/generate/controller.go:248 +0xa65\ngithub.com/kyverno/kyverno/pkg/background/generate.(*GenerateController).ProcessUR(0xc000a00e10, 0xc001fd3b88)\n\tgithub.com/kyverno/kyverno/pkg/background/generate/controller.go:121 +0x758\ngithub.com/kyverno/kyverno/pkg/background.(*controller).processUR(0xc000a004b0, 0xc001fd3b88)\n\tgithub.com/kyverno/kyverno/pkg/background/update_request_controller.go:235 +0x845\ngithub.com/kyverno/kyverno/pkg/background.(*controller).syncUpdateRequest(0xc000a004b0, {0xc001145a20, 0x10})\n\tgithub.com/kyverno/kyverno/pkg/background/update_request_controller.go:190 +0x31d\ngithub.com/kyverno/kyverno/pkg/background.(*controller).processNextWorkItem(0xc000a004b0)\n\tgithub.com/kyverno/kyverno/pkg/background/update_request_controller.go:142 +0xb9\ngithub.com/kyverno/kyverno/pkg/background.(*controller).worker(...)\n\tgithub.com/kyverno/kyverno/pkg/background/update_request_controller.go:131\nk8s.io/apimachinery/pkg/util/wait.JitterUntilWithContext.func1()\n\tk8s.io/apimachinery@v0.31.1/pkg/util/wait/backoff.go:259 +0x1f\nk8s.io/apimachinery/pkg/util/wait.BackoffUntil.func1(0x30?)\n\tk8s.io/apimachinery@v0.31.1/pkg/util/wait/backoff.go:226 +0x33\nk8s.io/apimachinery/pkg/util/wait.BackoffUntil(0xc00308bf70, {0x4683720, 0xc001f23da0}, 0x1, 0xc0002ca150)\n\tk8s.io/apimachinery@v0.31.1/pkg/util/wait/backoff.go:227 +0xaf\nk8s.io/apimachinery/pkg/util/wait.JitterUntil(0xc00204a770, 0x3b9aca00, 0x0, 0x1, 0xc0002ca150)\n\tk8s.io/apimachinery@v0.31.1/pkg/util/wait/backoff.go:204 +0x7f\nk8s.io/apimachinery/pkg/util/wait.JitterUntilWithContext({0x46c8948, 0xc000b90000}, 0xc0021d8340, 0x3b9aca00, 0x0, 0x1)\n\tk8s.io/apimachinery@v0.31.1/pkg/util/wait/backoff.go:259 +0x87\nk8s.io/apimachinery/pkg/util/wait.UntilWithContext(...)\n\tk8s.io/apimachinery@v0.31.1/pkg/util/wait/backoff.go:170\ncreated by github.com/kyverno/kyverno/pkg/background.(*controller).Run in goroutine 263\n\tgithub.com/kyverno/kyverno/pkg/background/update_request_controller.go:122 +0x1b4\n"
+panic: runtime error: invalid memory address or nil pointer dereference [recovered]
+    panic: runtime error: invalid memory address or nil pointer dereference
+[signal SIGSEGV: segmentation violation code=0x1 addr=0x0 pc=0x3513b64]
+
+goroutine 297 [running]:
+k8s.io/apimachinery/pkg/util/runtime.handleCrash({0x46c7fa0, 0x6a19d40}, {0x3985d00, 0x69320d0}, {0x6a19d40, 0x0, 0x10000c0020819b0?})
+    k8s.io/apimachinery@v0.31.1/pkg/util/runtime/runtime.go:89 +0xee
+k8s.io/apimachinery/pkg/util/runtime.HandleCrash({0x0, 0x0, 0xc0020819b0?})
+    k8s.io/apimachinery@v0.31.1/pkg/util/runtime/runtime.go:59 +0x108
+panic({0x3985d00?, 0x69320d0?})
+    runtime/panic.go:785 +0x132
+k8s.io/apimachinery/pkg/apis/meta/v1/unstructured.(*Unstructured).GetResourceVersion(...)
+    k8s.io/apimachinery@v0.31.1/pkg/apis/meta/v1/unstructured/unstructured.go:287
+github.com/kyverno/kyverno/pkg/background/generate.manageData({{0x46d6e08?, 0xc0026297a0?}, 0x1b?}, {{0xc00271aba0, 0x14}, {0xc0024a1450, 0xd}, {0xc00271abe8, 0x14}, {0xc00271abd0, ...}, ...}, ...)
+    github.com/kyverno/kyverno/pkg/background/generate/data.go:39 +0x2e4
+github.com/kyverno/kyverno/pkg/background/generate.(*generator).generate(0xc002894608)
+    github.com/kyverno/kyverno/pkg/background/generate/generator.go:124 +0x8a8
+github.com/kyverno/kyverno/pkg/background/generate.(*GenerateController).ApplyGeneratePolicy(0xc000a00e10, {{0x46d6e08?, 0xc00148faa0?}, 0xc001ffe960?}, 0xc00262b2c0, {0xc002604890, 0x1, 0xc00274fb00?})
+    github.com/kyverno/kyverno/pkg/background/generate/controller.go:362 +0xf67
+github.com/kyverno/kyverno/pkg/background/generate.(*GenerateController).applyGenerate(_, {_}, {{{0xc001baf160, 0xd}, {0xc001baf150, 0xd}}, {{0xc001baf1c8, 0x8}, {0xc001baf138, 0x3}, ...}, ...}, ...)
+    github.com/kyverno/kyverno/pkg/background/generate/controller.go:248 +0xa65
+github.com/kyverno/kyverno/pkg/background/generate.(*GenerateController).ProcessUR(0xc000a00e10, 0xc001fd3b88)
+    github.com/kyverno/kyverno/pkg/background/generate/controller.go:121 +0x758
+github.com/kyverno/kyverno/pkg/background.(*controller).processUR(0xc000a004b0, 0xc001fd3b88)
+    github.com/kyverno/kyverno/pkg/background/update_request_controller.go:235 +0x845
+github.com/kyverno/kyverno/pkg/background.(*controller).syncUpdateRequest(0xc000a004b0, {0xc001145a20, 0x10})
+    github.com/kyverno/kyverno/pkg/background/update_request_controller.go:190 +0x31d
+github.com/kyverno/kyverno/pkg/background.(*controller).processNextWorkItem(0xc000a004b0)
+    github.com/kyverno/kyverno/pkg/background/update_request_controller.go:142 +0xb9
+github.com/kyverno/kyverno/pkg/background.(*controller).worker(...)
+    github.com/kyverno/kyverno/pkg/background/update_request_controller.go:131
+k8s.io/apimachinery/pkg/util/wait.JitterUntilWithContext.func1()
+    k8s.io/apimachinery@v0.31.1/pkg/util/wait/backoff.go:259 +0x1f
+k8s.io/apimachinery/pkg/util/wait.BackoffUntil.func1(0x30?)
+    k8s.io/apimachinery@v0.31.1/pkg/util/wait/backoff.go:226 +0x33
+k8s.io/apimachinery/pkg/util/wait.BackoffUntil(0xc00308bf70, {0x4683720, 0xc001f23da0}, 0x1, 0xc0002ca150)
+    k8s.io/apimachinery@v0.31.1/pkg/util/wait/backoff.go:227 +0xaf
+k8s.io/apimachinery/pkg/util/wait.JitterUntil(0xc00204a770, 0x3b9aca00, 0x0, 0x1, 0xc0002ca150)
+    k8s.io/apimachinery@v0.31.1/pkg/util/wait/backoff.go:204 +0x7f
+k8s.io/apimachinery/pkg/util/wait.JitterUntilWithContext({0x46c8948, 0xc000b90000}, 0xc0021d8340, 0x3b9aca00, 0x0, 0x1)
+    k8s.io/apimachinery@v0.31.1/pkg/util/wait/backoff.go:259 +0x87
+k8s.io/apimachinery/pkg/util/wait.UntilWithContext(...)
+    k8s.io/apimachinery@v0.31.1/pkg/util/wait/backoff.go:170
+created by github.com/kyverno/kyverno/pkg/background.(*controller).Run in goroutine 263
+    github.com/kyverno/kyverno/pkg/background/update_request_controller.go:122 +0x1b4
+Stream closed EOF for kyverno/kyverno-background-controller-668876559b-k2v77 (controller)
